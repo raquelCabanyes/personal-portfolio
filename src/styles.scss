@@ -2,3 +2,10 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+:root {
+  --color-primary: #342866;
+  --color-secondary: #7C5DDF;
+  --color-tertiary: #00A1A3;
+  --color-quaternary: #FFA600;
+}
