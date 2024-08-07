@@ -1,23 +1,7 @@
 <div class="bg-secondary w-full h-screen flex items-center justify-center">
-
-  <div class="bg-primary w-2/3 flex flex-col rounded-3xl">
-    <header class="flex justify-between items-center p-6">
-      <div class="font-semibold text-xl text-white">
-        Raquel Cabanyes
-      </div>
-      <ul class="flex font-semibold">
-        <li class="pr-3"><a class="text-white cursor-pointer">Home</a></li>
-        <li class="pr-3"><a class="text-white cursor-pointer">About</a></li>
-        <li><a class="text-white cursor-pointer">Portofolio</a></li>
-      </ul>
-      <div class="bg-quaternary rounded-2xl py-3 px-6 font-semibold">
-        <fa-icon fa-icon [icon]="faPhone" class="mr-3"></fa-icon>
-        <span>Contacto</span>
-      </div>
-    </header>
+  <div
+    class="bg-primary h-screen lg:h-auto w-full lg:w-2/3 flex flex-col rounded-none lg:rounded-3xl overflow-y-auto">
+    <app-navbar></app-navbar>
     <router-outlet></router-outlet>
   </div>
-
 </div>
-
-

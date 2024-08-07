@@ -1,0 +1,30 @@
+<nav>
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-6 pt-6 pb-5">
+    <div class="w-3/4 md:w-1/3 text-2xl font-semibold text-white">Raquel Cabanyes</div>
+
+    <button type="button" (click)="isActive = !isActive" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+      <fa-icon fa-icon [icon]="faBars" class="text-quaternary text-3xl"></fa-icon>
+    </button>
+
+    @if (showMenu()) {
+      <div (click)="isActive = !isActive" tabindex="0" (keyup)="showMenu()" (keydown)="showMenu()" (keypress)="showMenu()"
+        class="md:w-2/3 w-full h-full md:h-auto bg-menu flex flex-col md:flex-row justify-start md:justify-between items-start md:items-center p-8 md:p-0 z-40 top-0 left-0"
+        [ngClass]="{'fixed md:relative': isActive, 'none md:flex': !isActive}">
+        <ul class="w-full md:w-1/2 flex flex-col md:flex-row justify-center font-semibold">
+          <!-- TODO cabecera movil -->
+          <li class="py-2 pl-2 md:py-0 md:pl-0 md:pr-3 pointer"><a [routerLink]="['/home']" (click)="checkSection()" class="text-white cursor-pointer" [ngClass]="{'underline bold': selectedSection === '/home'}">Home</a></li>
+          <li class="py-2 pl-2 md:py-0 md:pl-0 md:pr-3 pointer"><a [routerLink]="['/about']" (click)="checkSection()" class="text-white cursor-pointer" [ngClass]="{'underline bold': selectedSection === '/about'}">About</a></li>
+          <li class="pointer"><a [routerLink]="['/portofolio']" (click)="checkSection()" class="text-white cursor-pointer py-2 pl-2 md:py-0 md:pl-0" [ngClass]="{'underline bold': selectedSection === '/portofolio'}">Portofolio</a></li>
+        </ul>
+        <div class="w-full md:w-1/2 flex justify-start md:justify-end">
+          <a
+            href="mailto:raquelcabanyes@hotmail.com"
+            class="bg-quaternary rounded-2xl py-3 px-7 mt-8 md:mt-0 font-semibold">
+            <fa-icon fa-icon [icon]="faPhone" class="mr-3"></fa-icon>
+            <span>Contacto</span>
+          </a>
+        </div>
+      </div>
+    }
+    </div>
+</nav>
