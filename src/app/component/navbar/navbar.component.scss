@@ -1,3 +1,9 @@
 .bg-menu {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .bg-menu {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 }
