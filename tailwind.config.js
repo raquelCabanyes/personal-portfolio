@@ -13,6 +13,7 @@ module.exports = {
       secondary: 'var(--color-secondary)',
       tertiary: 'var(--color-tertiary)',
       quaternary: 'var(--color-quaternary)',
+      quinquenary: 'var(--color-quinquenary)',
     },
   },
   plugins: [],

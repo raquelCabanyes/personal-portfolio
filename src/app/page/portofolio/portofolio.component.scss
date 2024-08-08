@@ -1,0 +1,18 @@
+.experiencia::before {
+  content: '';
+  height: calc(100%);
+  @apply absolute top-0 left-0 w-0.5 bg-tertiary z-10;
+}
+
+.experiencia:not(.first-experience)::before {
+  content: '';
+  height: calc(100% + 48px);
+  @apply absolute top-0 left-0 w-0.5 bg-tertiary z-10;
+}
+
+.experiencia::after {
+  content: '';
+  left: -6px;
+  border-radius: 50%;
+  @apply absolute top-1.5 w-4 h-4 bg-quaternary z-20;
+}
