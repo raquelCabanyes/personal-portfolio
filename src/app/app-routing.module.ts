@@ -13,6 +13,13 @@ const routes: Routes = [
       import('./page/about/about.component').then(c => c.AboutComponent),
   },
   {
+    path: 'portofolio',
+    loadComponent: () =>
+      import('./page/portofolio/portofolio.component').then(
+        c => c.PortofolioComponent
+      ),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
