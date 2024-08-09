@@ -10,3 +10,19 @@
   --color-quaternary: #ffa600;
   --color-quinquenary: #E6E6FA;
 }
+
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-bottom-right-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-tertiary);
+  border-radius: 10px;
+}

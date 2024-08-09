@@ -30,11 +30,11 @@ export class NavbarComponent implements OnInit {
   constructor(private location: Location) {}
 
   ngOnInit(): void {
-    this.checkSection();
+    this.checkSection(this.location.path());
   }
 
-  public checkSection(): void {
-    this.selectedSection = this.location.path();
+  public checkSection(page: string): void {
+    this.selectedSection = page;
   }
 
   public showMenu() {
