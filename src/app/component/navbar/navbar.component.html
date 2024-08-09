@@ -35,28 +35,28 @@
           <li class="py-2 pl-2 md:py-0 md:pl-0 md:pr-3 pointer">
             <a
               [routerLink]="['/home']"
-              (click)="checkSection()"
-              class="text-white cursor-pointer"
-              [ngClass]="{ 'underline bold': selectedSection === '/home' }"
+              (click)="checkSection('/home')"
+              class="text-white"
+              [ngClass]="{ 'underline bold cursor-default': selectedSection === '/home' }"
               >Home</a
             >
           </li>
           <li class="py-2 pl-2 md:py-0 md:pl-0 md:pr-3 pointer">
             <a
               [routerLink]="['/about']"
-              (click)="checkSection()"
-              class="text-white cursor-pointer"
-              [ngClass]="{ 'underline bold': selectedSection === '/about' }"
+              (click)="checkSection('/about')"
+              class="text-white"
+              [ngClass]="{ 'underline bold cursor-default': selectedSection === '/about' }"
               >About</a
             >
           </li>
           <li class="pointer">
             <a
               [routerLink]="['/portofolio']"
-              (click)="checkSection()"
-              class="text-white cursor-pointer py-2 pl-2 md:py-0 md:pl-0"
+              (click)="checkSection('/portofolio')"
+              class="text-white py-2 pl-2 md:py-0 md:pl-0"
               [ngClass]="{
-                'underline bold': selectedSection === '/portofolio',
+                'underline bold cursor-default': selectedSection === '/portofolio'
               }"
               >Portofolio</a
             >
