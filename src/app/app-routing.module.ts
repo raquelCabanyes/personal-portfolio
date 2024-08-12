@@ -13,10 +13,10 @@ const routes: Routes = [
       import('./page/about/about.component').then(c => c.AboutComponent),
   },
   {
-    path: 'portofolio',
+    path: 'experience',
     loadComponent: () =>
-      import('./page/portofolio/portofolio.component').then(
-        c => c.PortofolioComponent
+      import('./page/experience/experience.component').then(
+        c => c.ExperienceComponent
       ),
   },
   {
