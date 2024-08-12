@@ -14,7 +14,7 @@ describe('Navigation Test', () => {
   });
 
   it('should navigate to Portfolio', () => {
-    cy.contains('Portafolio').click();
-    cy.url().should('include', '/portofolio');
+    cy.contains('Experiencia').click();
+    cy.url().should('include', '/experience');
   });
 });
