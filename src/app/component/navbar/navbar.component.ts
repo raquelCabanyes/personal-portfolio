@@ -2,7 +2,7 @@ import { CommonModule, Location } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faPhone, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +12,7 @@ import { faPhone, faBars } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent implements OnInit {
-  public faPhone = faPhone;
+  public faEnvelope = faEnvelope;
   public faBars = faBars;
   public isActive = false;
   public selectedSection = '/home';
