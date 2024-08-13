@@ -38,7 +38,7 @@ export class NavbarComponent implements OnInit {
   }
 
   public showMenu() {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= this.widthMovil) {
       return true;
     } else if (this.isActive && window.innerWidth < this.widthMovil) {
       return true;
