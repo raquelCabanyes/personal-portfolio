@@ -22,9 +22,8 @@
       <div
         (click)="isActive = !isActive"
         tabindex="0"
-        (keyup)="showMenu()"
-        (keydown)="showMenu()"
-        (keypress)="showMenu()"
+        (keyup)="isActive = !isActive"
+        (keydown)="isActive = !isActive"
         class="md:w-2/3 w-full h-full md:h-auto bg-menu flex flex-col md:flex-row justify-start md:justify-between items-start md:items-center p-8 md:p-0 z-40 top-0 left-0"
         [ngClass]="{
           'fixed md:relative': isActive,
