@@ -12,7 +12,7 @@ export class ContactComponent {
   public iconFile = '../../../assets/icons/file.svg';
   public iconEnvelope = '../../../assets/icons/envelope.svg';
 
-  public fotoPath = "./assets/photo/photo1.jpg";
+  public fotoPath = './assets/photo/photo1.jpg';
 
   public urlLikedin = 'https://es.linkedin.com/in/raquelcabanyes';
   public urlFileCV =

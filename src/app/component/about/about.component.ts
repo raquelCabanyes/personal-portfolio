@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.scss'
+  styleUrl: './about.component.scss',
 })
 export class AboutComponent {
-  public fotoPath ="./assets/photo/photo2.jpg"
+  public fotoPath = './assets/photo/photo2.jpg';
 }
