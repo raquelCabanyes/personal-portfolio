@@ -7,7 +7,12 @@ import { CoursesComponent } from '../component/courses/courses.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ContactComponent, AboutComponent, ExperienceComponent,CoursesComponent],
+  imports: [
+    ContactComponent,
+    AboutComponent,
+    ExperienceComponent,
+    CoursesComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

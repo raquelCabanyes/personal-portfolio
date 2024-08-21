@@ -5,7 +5,7 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './courses.component.html',
-  styleUrl: './courses.component.scss'
+  styleUrl: './courses.component.scss',
 })
 export class CoursesComponent implements AfterViewInit {
   @ViewChild('container', { static: false }) containerElem!: ElementRef;
@@ -22,15 +22,18 @@ export class CoursesComponent implements AfterViewInit {
   public iconPolymer = '../../../assets/icons/polymer.svg';
 
   ngAfterViewInit() {
-    this.observerDiv = new IntersectionObserver((entries) => {
+    this.observerDiv = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry && entry.isIntersecting) {
-          const elementsToShow = Array.from(this.containerElem.nativeElement.querySelectorAll('.animated-element')).reverse() as HTMLElement[];
+          const elementsToShow = Array.from(
+            this.containerElem.nativeElement.querySelectorAll(
+              '.animated-element'
+            )
+          ).reverse() as HTMLElement[];
           elementsToShow.forEach((element: HTMLElement, index: number) => {
-              element.classList.add('show');
-              const delay = (index + 1) * 0.3;
-              element.style.animationDelay = `${delay}s`;
-
+            element.classList.add('show');
+            const delay = (index + 1) * 0.3;
+            element.style.animationDelay = `${delay}s`;
           });
           this.observerDiv.unobserve(entry.target);
         }
