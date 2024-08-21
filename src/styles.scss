@@ -8,7 +8,7 @@
   --color-secondary: #8ecae6;
   --color-tertiary: #218083;
   --color-quaternary: #fb8500;
-  --color-quinquenary: #ccdbe3;
+  --color-quinquenary: #e1e1e6;
 }
 
 /* scrollbar */
@@ -24,4 +24,35 @@
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-tertiary);
   border-radius: 10px;
+}
+
+.gradient-primary-to-quinquenary {
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    #888e9f,
+    #a6a9b6,
+    #c4c4ce,
+    var(--color-quinquenary)
+  );
+}
+
+.gradient-quinquenary-to-primary {
+  background-image: linear-gradient(
+    to top,
+    var(--color-primary),
+    #888e9f,
+    #a6a9b6,
+    #c4c4ce,
+    var(--color-quinquenary)
+  );
+}
+
+/* Title bar */
+.title-bar {
+  width: calc(100% - 20px);
+}
+
+.title-bar::before {
+  content: '';
 }
