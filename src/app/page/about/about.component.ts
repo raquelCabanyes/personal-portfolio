@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })

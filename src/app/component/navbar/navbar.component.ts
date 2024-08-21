@@ -1,19 +1,15 @@
 import { CommonModule, Location } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [FontAwesomeModule, CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent implements OnInit {
-  public faEnvelope = faEnvelope;
-  public faBars = faBars;
   public isActive = false;
   public selectedSection = '/home';
   public widthMovil = 768;
