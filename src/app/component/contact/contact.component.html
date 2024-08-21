@@ -1,0 +1,43 @@
+<div
+  class="h-screen min-h-[300px] w-full bg-primary flex justify-center items-center">
+  <div class="w-[755px] h-full flex justify-center items-center">
+    <div class="mr-4 my-4 ml-5 text-center md:text-left">
+      <p class="text-6xl font-semibold text-white">Raquel Cabanyes</p>
+      <p class="mb-8 mt-1 text-xl text-quinquenary">Frontend Developer</p>
+
+      <div class="w-full h-9 flex justify-center items-center md:justify-start">
+        <a [href]="urlLikedin" target="_blank" class="flex text-white">
+          <img [src]="iconLikedin" class="w-8" alt="Likedin" />
+          <span class="self-end pl-2">LinkedIn</span>
+        </a>
+      </div>
+
+      <div class="mt-24 md:mt-11 flex flex-col md:flex-row">
+        <a
+          href="mailto:raquelcabanyes@hotmail.com"
+          class="min-w-44 flex justify-center items-center rounded-2xl mr-0 md:mr-4 mb-4 md:mb-0 py-3 px-7 font-semibold text-quinquenary border-2">
+          <img
+            [src]="iconFile"
+            class="hidden md:block w-8 h-7 text-quinquenary"
+            alt="Enviar mail" />
+          <span class="pl-2">Contacto</span>
+        </a>
+        <a
+          href="mailto:raquelcabanyes@hotmail.com"
+          class="min-w-44 flex justify-center items-center bg-quaternary rounded-2xl py-3 px-7 font-semibold text-white">
+          <img
+            [src]="iconEnvelope"
+            class="hidden md:block w-8 h-7"
+            alt="CV descargable" />
+          <span class="pl-2">Curriculum</span>
+          <!-- Todo download cv -->
+        </a>
+      </div>
+    </div>
+
+    <img
+      class="max-h-[360px] hidden md:flex items-center mr-5 my-4 ml-4 rounded-3xl object-cover object-left"
+      src="/assets/photo/photo1.jpg"
+      alt="Foto de Raquel Cabanyes en la naturaleza" />
+  </div>
+</div>
