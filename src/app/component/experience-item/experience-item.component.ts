@@ -1,4 +1,11 @@
-import { Component, ElementRef, Input, ViewChild, OnDestroy, AfterViewInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  Input,
+  ViewChild,
+  OnDestroy,
+  AfterViewInit,
+} from '@angular/core';
 
 @Component({
   selector: 'app-experience-item',
@@ -8,38 +15,38 @@ import { Component, ElementRef, Input, ViewChild, OnDestroy, AfterViewInit } fro
   styleUrl: './experience-item.component.scss',
 })
 export class ExperienceItemComponent implements OnDestroy, AfterViewInit {
-  @ViewChild('descriptionDiv', { static: false }) descriptionElem!: ElementRef;
+  @ViewChild('descriptionExperienceDiv', { static: false })
+  descriptionExpElem!: ElementRef;
 
   @Input() title!: string;
   @Input() dates!: string[];
-  @Input() description!: string;
+  @Input() descriptionExperience!: string;
 
-  private observerDescription!: IntersectionObserver;
+  private observerdescriptionExperience!: IntersectionObserver;
 
   ngAfterViewInit() {
-    this.createDescriptionDivObservable();
+    this.createdescriptionExperienceObservable();
   }
 
-  private createDescriptionDivObservable(): void {
-    //Create the instance to check if the element is visible
-    this.observerDescription = new IntersectionObserver(([entry]) => {
+  private createdescriptionExperienceObservable(): void {
+    this.observerdescriptionExperience = new IntersectionObserver(([entry]) => {
       //Check that the element exists and is visible on the screen
-        if (entry && entry.isIntersecting) {
-          //Add the fade-in class to the element
-          this.descriptionElem.nativeElement.classList.add('fade-in');
-          //Remove the observable
-          this.observerDescription.unobserve(this.descriptionElem.nativeElement);
-        }
+      if (entry && entry.isIntersecting) {
+        this.descriptionExpElem.nativeElement.classList.add('fade-in');
+        this.observerdescriptionExperience.unobserve(
+          this.descriptionExpElem.nativeElement
+        );
       }
-    );
+    });
 
-    //Create the descriptionElem observable
-    this.observerDescription.observe(this.descriptionElem.nativeElement);
+    this.observerdescriptionExperience.observe(
+      this.descriptionExpElem.nativeElement
+    );
   }
 
   ngOnDestroy() {
-    if (this.observerDescription) {
-      this.observerDescription.disconnect();
+    if (this.observerdescriptionExperience) {
+      this.observerdescriptionExperience.disconnect();
     }
   }
 }
