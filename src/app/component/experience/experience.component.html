@@ -1,109 +1,18 @@
 <div class="w-full bg-primary px-4 py-24 flex justify-center items-center">
-  <div #containerJobs class="w-[755px] p-4 flex flex-col justify-center">
+  <div class="w-[755px] p-4 flex flex-col justify-center">
     <div class="relative inline-block m-auto text-center mb-24">
       <div class="relative text-6xl font-semibold text-white">Experiencia</div>
       <div
         class="title-bar relative top-2.5 left-2.5 h-[5px] rounded-lg bg-tertiary before:absolute before:w-[40%] before:left-[30%] before:h-full before:rounded-lg before:bg-quaternary"></div>
     </div>
 
-    <!-- TODO component -->
-    <div class="flex flex-col md:flex-row justify-center text-white pb-12">
-      <div class="experiencia relative pl-8 w-full md:w-1/3">
-        <div>
-          <div class="text-xl text-quaternary">Impulsyn</div>
-          <div class="text-sm">Mayo 2024 - Actualmente</div>
-          <div class="text-sm">Diciembre 2023 - Abril 2024</div>
-          <div class="text-sm">Febrero 2023 - Julio 2024</div>
-        </div>
-      </div>
-      <div
-        class="responsibilities relative pl-8 md:pl-4 pt-4 md:pt-0 w-full md:w-2/3">
-        <div class="fade-in">
-          Red social del mundo del deporte con Angular Universal (Angular 14) y
-          arquitectura en AWS. App híbrida publicada en Apple Store y Play Store
-          desarrollada en Ionic 5 y Angular 10 con arquitectura backend en AWS.
-          Servicios GraphQL y base de datos de grafos con tecnología Neptune
-          (AWS). Notificaciones con OneSignal. Envío automático de emails con
-          SES, tratamiento, optimización y almacenamiento de vídeos e imágenes
-          en la nube con herramientas propias de AWS.
-        </div>
-      </div>
-    </div>
-
-    <div class="flex flex-col md:flex-row justify-center text-white pb-12">
-      <div class="experiencia relative pl-8 w-full md:w-1/3">
-        <div>
-          <div class="text-xl text-quaternary">Seidor</div>
-          <div class="text-sm">Marzo 2024 - Mayo 2024</div>
-        </div>
-      </div>
-      <div
-        class="responsibilities relative pl-8 md:pl-4 pt-4 md:pt-0 w-full md:w-2/3">
-        <div class="fade-in">
-          Actualización tecnológica de app hibrida de Ionic 3 y Angular 6 a
-          Ionic 6 y angular 12. Modificación y migración de la estructura del
-          proyecto y actualización de componentes.
-        </div>
-      </div>
-    </div>
-
-    <div class="flex flex-col md:flex-row justify-center text-white pb-12">
-      <div class="experiencia relative pl-8 w-full md:w-1/3">
-        <div>
-          <div class="text-xl text-quaternary">Yeeply</div>
-          <div class="text-sm">Agosto 2023 - Noviembre 2024</div>
-        </div>
-      </div>
-      <div
-        class="responsibilities relative pl-8 md:pl-4 pt-4 md:pt-0 w-full md:w-2/3">
-        <div class="fade-in">
-          Proyecto web con Angular 12 y PrimeNg. Modificación, desarrollo e
-          implementación de componentes y graficas con chartJS.
-        </div>
-      </div>
-    </div>
-
-    <div class="flex flex-col md:flex-row justify-center text-white pb-12">
-      <div class="experiencia relative pl-8 w-full md:w-1/3">
-        <div>
-          <div class="text-xl text-quaternary">BBVA</div>
-          <div class="text-sm">Julio 2018 - Enero 2021</div>
-        </div>
-      </div>
-      <div
-        class="responsibilities relative pl-8 md:pl-4 pt-4 md:pt-0 w-full md:w-2/3">
-        <div class="fade-in">
-          Desarrollador de Frontend realizando componentes en proyecto Agent
-          para BBVA Empresas, para la visualización de movimientos de
-          empresasrelacionados con prestamos. Las tecnologías utilizadas son
-          Polymer (cells), HTML5, CSS3, Javascript ES6, GIT para el control de
-          versiones. Maquetación, modificación y creación de componentes
-          primeramente con Polymer y posteriormente con Lit-Element
-          implementándolo en distintos implementación de Adobe analytics,
-          modificando estudios existentes y realizando nuevos estudios.
-          Analítica web mediante la realización de software para la extracción
-          de información concreta para determinar el comportamiento y uso de los
-          clientes dentro de las distintas operativas web. Tecnologías
-          utilizadas: React, Vue, Ionic, Cordova, Capacitor, AWS, Polymer,
-          LitElement, Google Analytics y Adobe analytics.
-        </div>
-      </div>
-    </div>
-
-    <div class="flex flex-col md:flex-row justify-center text-white">
-      <div class="experiencia first-experience relative pl-8 w-full md:w-1/3">
-        <div>
-          <div class="text-xl text-quaternary">MYMOID</div>
-          <div class="text-sm">Marzo 2018 - Junio 2018</div>
-        </div>
-      </div>
-      <div
-        class="responsibilities first-experience relative pl-8 md:pl-4 pt-4 md:pt-0 w-full md:w-2/3">
-        <div class="fade-in">
-          Maquetación, modificación y creación de componentes ReactJS, para
-          desarrollo web de una pasarela de pagos.
-        </div>
-      </div>
-    </div>
+    @for (experience of experienceList; track experience) {
+      <app-experience-item
+        [title]="experience.title"
+        [dates]="experience.dates"
+        [descriptionExperience]="
+          experience.descriptionExperience
+        "></app-experience-item>
+    }
   </div>
 </div>

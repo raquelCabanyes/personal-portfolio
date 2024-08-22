@@ -1,0 +1,65 @@
+//Experience
+.experiencia::after {
+  content: '';
+  left: -6px;
+  border-radius: 50%;
+  @apply absolute top-1.5 w-4 h-4 bg-quaternary z-20;
+}
+
+.experiencia::before {
+  content: '';
+  height: calc(100%);
+  @apply absolute top-0 left-0 w-0.5 bg-tertiary z-10;
+}
+
+.experiencia:not(.first-experience)::before {
+  content: '';
+  height: calc(100%);
+  @apply absolute top-0 left-0 w-0.5 bg-tertiary z-10;
+}
+
+.responsibilities::before {
+  content: '';
+  height: calc(100%);
+  @apply absolute top-0 left-0 w-0.5 bg-tertiary z-10;
+}
+
+.responsibilities:not(.first-experience)::before {
+  content: '';
+  height: calc(100% + 48px);
+  @apply absolute top-0 left-0 w-0.5 bg-tertiary z-10;
+}
+
+@media (min-width: 768px) {
+  .experiencia:not(.first-experience)::before {
+    content: '';
+    height: calc(100% + 48px);
+    @apply absolute top-0 left-0 w-0.5 bg-tertiary z-10;
+  }
+
+  .responsibilities::before {
+    height: 0;
+  }
+
+  .responsibilities:not(.first-experience)::before {
+    height: 0;
+  }
+}
+
+/* Animation description experience */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+}
