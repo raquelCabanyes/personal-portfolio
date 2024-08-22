@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild, OnDestroy, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-experience-item',
@@ -7,34 +7,39 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
   templateUrl: './experience-item.component.html',
   styleUrl: './experience-item.component.scss',
 })
-export class ExperienceItemComponent {
+export class ExperienceItemComponent implements OnDestroy, AfterViewInit {
+  @ViewChild('descriptionDiv', { static: false }) descriptionElem!: ElementRef;
+
   @Input() title!: string;
   @Input() dates!: string[];
   @Input() description!: string;
 
-  @ViewChild('description', { static: false }) descriptionElem!: ElementRef;
+  private observerDescription!: IntersectionObserver;
 
-  private observerResponsibilities!: IntersectionObserver;
+  ngAfterViewInit() {
+    this.createDescriptionDivObservable();
+  }
 
-  // constructor(private renderer: Renderer2) {}
+  private createDescriptionDivObservable(): void {
+    //Create the instance to check if the element is visible
+    this.observerDescription = new IntersectionObserver(([entry]) => {
+      //Check that the element exists and is visible on the screen
+        if (entry && entry.isIntersecting) {
+          //Add the fade-in class to the element
+          this.descriptionElem.nativeElement.classList.add('fade-in');
+          //Remove the observable
+          this.observerDescription.unobserve(this.descriptionElem.nativeElement);
+        }
+      }
+    );
 
-  // ngAfterViewInit() {
-  //   const responsibilitiesElem =
-  //     this.containerJobsElem.nativeElement.querySelectorAll(
-  //       '.responsibilities'
-  //     );
+    //Create the descriptionElem observable
+    this.observerDescription.observe(this.descriptionElem.nativeElement);
+  }
 
-  //   this.observerResponsibilities = new IntersectionObserver(
-  //     async ([entry]) => {
-  //       if (entry && entry.isIntersecting) {
-  //         this.renderer.addClass(entry.target, 'fade-in');
-  //         this.observerResponsibilities.unobserve(entry.target);
-  //       }
-  //     }
-  //   );
-
-  //   responsibilitiesElem.forEach((element: Element) => {
-  //     this.observerResponsibilities.observe(element);
-  //   });
-  // }
+  ngOnDestroy() {
+    if (this.observerDescription) {
+      this.observerDescription.disconnect();
+    }
+  }
 }
