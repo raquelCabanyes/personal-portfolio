@@ -6,6 +6,7 @@ import {
   OnDestroy,
   AfterViewInit,
 } from '@angular/core';
+import { IExperience } from '../../interfaces/experience';
 
 @Component({
   selector: 'app-experience-item',
@@ -18,9 +19,7 @@ export class ExperienceItemComponent implements OnDestroy, AfterViewInit {
   @ViewChild('descriptionExperienceDiv', { static: false })
   descriptionExpElem!: ElementRef;
 
-  @Input() title!: string;
-  @Input() dates!: string[];
-  @Input() descriptionExperience!: string;
+  @Input() experienceInfo!: IExperience;
 
   private observerdescriptionExperience!: IntersectionObserver;
 
