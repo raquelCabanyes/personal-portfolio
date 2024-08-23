@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './course-item.component.html',
-  styleUrl: './course-item.component.scss'
+  styleUrl: './course-item.component.scss',
 })
 export class CourseItemComponent {
   @Input() courseInfo!: ICourse;

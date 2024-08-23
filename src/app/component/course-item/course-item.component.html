@@ -1,6 +1,13 @@
-<div class="animated-element pt-4 flex items-baseline" [ngClass]="{'ml-8': !courseInfo.img}">
+<div
+  class="animated-element pt-4 flex items-baseline"
+  [ngClass]="{ 'ml-8': !courseInfo.img }">
   @if (courseInfo.img) {
-    <img [src]="courseInfo.img.src" class="w-6 h-6 mr-2" alt="courseInfo.img.alt" />
+    <img
+      [src]="courseInfo.img.src"
+      class="w-6 h-6 mr-2"
+      alt="courseInfo.img.alt" />
   }
-  {{courseInfo.title}}&nbsp;<span class="text-xs">({{courseInfo.year}})</span>
+  {{ courseInfo.title }}&nbsp;<span class="text-xs"
+    >({{ courseInfo.year }})</span
+  >
 </div>

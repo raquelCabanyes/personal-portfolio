@@ -1,8 +1,8 @@
 export interface ICourse {
-  title: string,
-  year: string,
+  title: string;
+  year: string;
   img: null | {
-    src: string,
-    alt: string
-  }
+    src: string;
+    alt: string;
+  };
 }
