@@ -7,12 +7,7 @@
     </div>
 
     @for (experience of experienceList; track experience) {
-      <app-experience-item
-        [title]="experience.title"
-        [dates]="experience.dates"
-        [descriptionExperience]="
-          experience.descriptionExperience
-        "></app-experience-item>
+      <app-experience-item [experienceInfo]="experience"></app-experience-item>
     }
   </div>
 </div>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ExperienceItemComponent } from '../experience-item/experience-item.component';
-import { IExperienceList } from '../../interfaces/experience-list';
+import { IExperience } from '../../interfaces/experience';
 
 @Component({
   selector: 'app-experience',
@@ -10,7 +10,7 @@ import { IExperienceList } from '../../interfaces/experience-list';
   styleUrl: './experience.component.scss',
 })
 export class ExperienceComponent {
-  public experienceList: IExperienceList[] = [
+  public experienceList: IExperience[] = [
     {
       title: 'Impulsyn',
       dates: [
