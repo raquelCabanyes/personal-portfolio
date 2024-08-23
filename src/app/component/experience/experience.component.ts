@@ -16,7 +16,7 @@ export class ExperienceComponent {
       dates: [
         'Mayo 2024 - Actualmente',
         'Diciembre 2023 - Abril 2024',
-        'Febrero 2023 - Julio 2024',
+        'Febrero 2021 - Julio 2023',
       ],
       descriptionExperience:
         'Red social del mundo del deporte con Angular Universal (Angular 14) y arquitectura en AWS. App híbrida publicada en Apple Store y Play Store desarrollada en Ionic 5 y Angular 10 con arquitectura backend en AWS. Servicios GraphQL y base de datos de grafos con tecnología Neptune (AWS). Notificaciones con OneSignal. Envío automático de emails con SES, tratamiento, optimización y almacenamiento de vídeos e imágenes en la nube con herramientas propias de AWS.',
@@ -29,7 +29,7 @@ export class ExperienceComponent {
     },
     {
       title: 'Yeeply',
-      dates: ['Agosto 2023 - Noviembre 2024'],
+      dates: ['Agosto 2023 - Noviembre 2023'],
       descriptionExperience:
         'Proyecto web con Angular 12 y PrimeNg. Modificación, desarrollo e implementación de componentes y graficas con chartJS.',
     },
