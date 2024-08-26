@@ -6,7 +6,10 @@
       <p class="mb-8 mt-3 text-xl text-quinquenary">Frontend Developer</p>
 
       <div class="w-full h-9 flex justify-center items-center md:justify-start">
-        <a [href]="urlLikedin" target="_blank" class="flex text-white">
+        <a
+          [href]="urlLikedin"
+          target="_blank"
+          class="flex text-white hover:underline">
           <img [src]="iconLikedin" class="w-8" alt="Likedin" />
           <span class="self-end pl-2">LinkedIn</span>
         </a>
@@ -15,7 +18,7 @@
       <div class="mt-24 md:mt-11 mb-0 md:mb-2 flex flex-col md:flex-row">
         <a
           href="mailto:raquelcabanyes@hotmail.com"
-          class="min-w-44 flex justify-center items-center rounded-2xl mr-0 md:mr-4 mb-4 md:mb-0 py-3 px-7 font-semibold text-quinquenary border-2">
+          class="min-w-44 flex justify-center items-center rounded-2xl mr-0 md:mr-4 mb-4 md:mb-0 py-3 px-7 font-semibold text-quinquenary border-2 hover:bg-[#677997]">
           <img
             [src]="iconFile"
             class="hidden md:block w-8 h-7 text-quinquenary"
@@ -25,7 +28,7 @@
         <a
           target="_blank"
           [href]="urlFileCV"
-          class="min-w-44 flex justify-center items-center bg-quaternary rounded-2xl py-3 px-7 font-semibold text-white">
+          class="min-w-44 flex justify-center items-center bg-quaternary rounded-2xl py-3 px-7 font-semibold text-white hover:bg-[#FFB159]">
           <img
             [src]="iconEnvelope"
             class="hidden md:block w-8 h-7"
