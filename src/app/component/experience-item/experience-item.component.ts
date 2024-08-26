@@ -24,7 +24,10 @@ export class ExperienceItemComponent implements OnDestroy, AfterViewInit {
   private observerdescriptionExperience!: IntersectionObserver;
 
   ngAfterViewInit() {
-    this.createdescriptionExperienceObservable();
+    const isMDScreen = window.matchMedia('(min-width: 768px)').matches;
+    if (isMDScreen) {
+      this.createdescriptionExperienceObservable();
+    }
   }
 
   private createdescriptionExperienceObservable(): void {
