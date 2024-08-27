@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ICourse } from '../../interfaces/course';
+import { ICourse } from '../../../@shared/interfaces/course';
 import { CommonModule } from '@angular/common';
 
 @Component({

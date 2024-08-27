@@ -5,9 +5,9 @@ import {
   AfterViewInit,
   OnDestroy,
 } from '@angular/core';
-import { CourseItemComponent } from '../course-item/course-item.component';
+import { CourseItemComponent } from './course-item/course-item.component';
 import { CommonModule } from '@angular/common';
-import { COURSES_LIST } from '../../../assets/data/data_experience';
+import { COURSES_LIST } from '../../../assets/data/experience';
 
 @Component({
   selector: 'app-courses',
