@@ -1,15 +1,20 @@
 import { Component } from '@angular/core';
 import { ExperienceItemComponent } from './experience-item/experience-item.component';
+import { ExperiencesService } from '@core/services/experiences.service';
 import { IExperience } from '@shared/interfaces/experience';
-import { EXPERIENCE_LIST } from 'src/assets/data/experience';
 
 @Component({
   selector: 'app-experience',
   standalone: true,
   imports: [ExperienceItemComponent],
+  providers: [ExperiencesService],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss',
 })
 export class ExperienceComponent {
-  public experienceList: IExperience[] = EXPERIENCE_LIST
+  public experienceList: IExperience[];
+
+  constructor(private experiencesService: ExperiencesService) {
+    this.experienceList = experiencesService.getExperience();
+  }
 }

@@ -7,8 +7,8 @@ import {
 } from '@angular/core';
 import { CourseItemComponent } from './course-item/course-item.component';
 import { CommonModule } from '@angular/common';
+import { CoursesService } from '@core/services/courses.service';
 import { ICourse } from '@shared/interfaces/course';
-import { COURSES_LIST } from 'src/assets/data/courses';
 
 @Component({
   selector: 'app-courses',
@@ -22,7 +22,11 @@ export class CoursesComponent implements AfterViewInit, OnDestroy {
 
   private observerDiv!: IntersectionObserver;
 
-  public coursesList: ICourse[] = COURSES_LIST;
+  public coursesList: ICourse[];
+
+  constructor(private coursesService: CoursesService) {
+    this.coursesList = coursesService.getCourses();
+  }
 
   private addAnimationToCoursesElements(): void {
     //If the animation delay is done in the child, all the animations are shown at the same time
