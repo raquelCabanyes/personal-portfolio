@@ -5,7 +5,7 @@ export const COURSES_LIST: ICourse[] = [
     title: 'Vue 3',
     year: '2023',
     img: {
-      src: '@assets/icons/vue.svg',
+      src: 'assets/icons/vue.svg',
       alt: 'Icono de Vue',
     },
   },
@@ -23,7 +23,7 @@ export const COURSES_LIST: ICourse[] = [
     title: 'Curso CSS Profesional',
     year: '2022',
     img: {
-      src: '@assets/icons/css.svg',
+      src: 'assets/icons/css.svg',
       alt: 'Icono de CSS',
     },
   },
@@ -31,7 +31,7 @@ export const COURSES_LIST: ICourse[] = [
     title: 'Curso NgRx',
     year: '2021',
     img: {
-      src: '@assets/icons/ngrx.svg',
+      src: 'assets/icons/ngrx.svg',
       alt: 'Icono de NgRx',
     },
   },
@@ -39,7 +39,7 @@ export const COURSES_LIST: ICourse[] = [
     title: 'Curso LitElement',
     year: '2020',
     img: {
-      src: '@assets/icons/lit.svg',
+      src: 'assets/icons/lit.svg',
       alt: 'Icono de LitElement',
     },
   },
@@ -47,7 +47,7 @@ export const COURSES_LIST: ICourse[] = [
     title: 'Curso Angular 10',
     year: '2019',
     img: {
-      src: '@assets/icons/angular.svg',
+      src: 'assets/icons/angular.svg',
       alt: 'Icono de Angular',
     },
   },
@@ -60,7 +60,7 @@ export const COURSES_LIST: ICourse[] = [
     title: 'Curso de Testing Jest',
     year: '2018',
     img: {
-      src: '@assets/icons/jest.svg',
+      src: 'assets/icons/jest.svg',
       alt: 'Icono de Jest',
     },
   },
@@ -73,7 +73,7 @@ export const COURSES_LIST: ICourse[] = [
     title: 'Curso de ReactJS',
     year: '2018',
     img: {
-      src: '@assets/icons/react.svg',
+      src: 'assets/icons/react.svg',
       alt: 'Icono de React',
     },
   },
@@ -81,7 +81,7 @@ export const COURSES_LIST: ICourse[] = [
     title: 'Curso de Polymer',
     year: '2017',
     img: {
-      src: '@assets/icons/polymer.svg',
+      src: 'assets/icons/polymer.svg',
       alt: 'Icono de Polymer',
     },
   },

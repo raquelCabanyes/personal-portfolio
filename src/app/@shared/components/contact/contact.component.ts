@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  public iconLikedin = '@assets/icons/linkedin.svg';
-  public iconFile = '@assets/icons/file.svg';
-  public iconEnvelope = '@assets/icons/envelope.svg';
+  public iconLikedin = 'assets/icons/linkedin.svg';
+  public iconFile = 'assets/icons/file.svg';
+  public iconEnvelope = 'assets/icons/envelope.svg';
 
-  public fotoPath = '@assets/photo/photo1.jpg';
+  public fotoPath = 'assets/photo/photo1.jpg';
 
   public urlLikedin = 'https://es.linkedin.com/in/raquelcabanyes';
   public urlFileCV =
