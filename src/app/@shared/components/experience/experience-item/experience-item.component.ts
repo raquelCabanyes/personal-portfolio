@@ -6,7 +6,7 @@ import {
   OnDestroy,
   AfterViewInit,
 } from '@angular/core';
-import { IExperience } from '../../interfaces/experience';
+import { IExperience } from '@shared/interfaces/experience';
 
 @Component({
   selector: 'app-experience-item',
