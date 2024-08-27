@@ -4,6 +4,7 @@ import {
   ViewChild,
   AfterViewInit,
   OnDestroy,
+  OnInit,
 } from '@angular/core';
 import { CourseItemComponent } from './course-item/course-item.component';
 import { CommonModule } from '@angular/common';
@@ -17,15 +18,17 @@ import { ICourse } from '@shared/interfaces/course';
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.scss',
 })
-export class CoursesComponent implements AfterViewInit, OnDestroy {
+export class CoursesComponent implements AfterViewInit, OnDestroy, OnInit {
   @ViewChild('container', { static: false }) containerElem!: ElementRef;
 
   private observerDiv!: IntersectionObserver;
 
-  public coursesList: ICourse[];
+  public coursesList: ICourse[] = [];
 
-  constructor(private coursesService: CoursesService) {
-    this.coursesList = coursesService.getCourses();
+  constructor(private coursesService: CoursesService) {}
+
+  ngOnInit(): void {
+    this.coursesList = this.coursesService.getCourses();
   }
 
   private addAnimationToCoursesElements(): void {
