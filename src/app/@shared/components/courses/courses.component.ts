@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { CourseItemComponent } from './course-item/course-item.component';
 import { CommonModule } from '@angular/common';
-import { COURSES_LIST } from '../../../assets/data/experience';
+import { COURSES_LIST } from '../../../../assets/data/courses';
 
 @Component({
   selector: 'app-courses',
