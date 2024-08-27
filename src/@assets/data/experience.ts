@@ -1,4 +1,4 @@
-import { IExperience } from '../../app/@shared/interfaces/experience';
+import { IExperience } from '@shared/interfaces/experience';
 
 export const EXPERIENCE_LIST: IExperience[] = [
   {
