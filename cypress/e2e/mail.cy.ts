@@ -4,10 +4,14 @@ describe('mail test', () => {
   });
 
   it('Should be of type mailto"', () => {
-    cy.get('#sendMail').should('have.attr', 'href').and('include', 'mailto:')
+    cy.get('#sendMail').should('have.attr', 'href').and('include', 'mailto:');
   });
 
   it('Should check mail', () => {
-    cy.get('#sendMail').should('have.attr', 'href', 'mailto:raquelcabanyes@hotmail.com')
+    cy.get('#sendMail').should(
+      'have.attr',
+      'href',
+      'mailto:raquelcabanyes@hotmail.com'
+    );
   });
-})
+});
