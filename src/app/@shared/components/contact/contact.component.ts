@@ -1,9 +1,10 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -12,7 +13,7 @@ export class ContactComponent {
   public iconFile = 'assets/icons/file.svg';
   public iconEnvelope = 'assets/icons/envelope.svg';
 
-  public fotoPath = 'assets/photo/photo1.jpg';
+  public fotoPath = '/assets/photo/photo1.jpg';
 
   public urlLikedin = 'https://es.linkedin.com/in/raquelcabanyes';
   public urlFileCV =

@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { ICourse } from '@shared/interfaces/course';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-course-item',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: './course-item.component.html',
   styleUrl: './course-item.component.scss',
 })
