@@ -12,7 +12,13 @@
           [href]="urlLikedin"
           target="_blank"
           class="flex text-white hover:underline">
-          <img [src]="iconLikedin" class="w-8" alt="Likedin" />
+          <img
+            [ngSrc]="iconLikedin"
+            class="w-8"
+            width="32"
+            height="32"
+            alt="Likedin"
+            priority />
           <span class="self-end pl-2">LinkedIn</span>
         </a>
       </div>
@@ -23,9 +29,12 @@
           href="mailto:raquelcabanyes@hotmail.com"
           class="min-w-44 flex justify-center items-center rounded-2xl mr-0 md:mr-4 mb-4 md:mb-0 py-3 px-7 font-semibold text-quinquenary border-2 hover:bg-[#677997]">
           <img
-            [src]="iconFile"
-            class="hidden md:block w-8 h-7 text-quinquenary"
-            alt="Enviar mail" />
+            [ngSrc]="iconFile"
+            width="32"
+            height="28"
+            class="hidden md:block text-quinquenary w-8 h-7"
+            alt="Enviar mail"
+            priority />
           <span class="pl-2">Contacto</span>
         </a>
         <a
@@ -34,9 +43,12 @@
           [href]="urlFileCV"
           class="min-w-44 flex justify-center items-center bg-quaternary rounded-2xl py-3 px-7 font-semibold text-white hover:bg-[#FFB159]">
           <img
-            [src]="iconEnvelope"
+            [ngSrc]="iconEnvelope"
+            width="32"
+            height="28"
             class="hidden md:block w-8 h-7"
-            alt="Ver CV de Raquel Cabanyes" />
+            alt="Ver CV de Raquel Cabanyes"
+            priority />
           <span class="pl-2">Curriculum</span>
           <!-- TODO Update CV -->
         </a>
@@ -45,8 +57,11 @@
 
     <img
       id="contactImg"
-      class="max-h-[360px] hidden md:flex items-center mr-5 my-4 ml-4 rounded-3xl object-cover object-left"
-      [src]="fotoPath"
-      alt="Foto de Raquel Cabanyes en la naturaleza" />
+      class="hidden md:flex items-center mr-5 my-4 ml-4 rounded-3xl object-cover object-left"
+      [ngSrc]="fotoPath"
+      width="166"
+      height="360"
+      alt="Foto de Raquel Cabanyes en la naturaleza"
+      priority />
   </div>
 </div>

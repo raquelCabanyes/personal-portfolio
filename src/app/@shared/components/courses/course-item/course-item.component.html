@@ -3,9 +3,12 @@
   [ngClass]="{ 'ml-8': !courseInfo.img }">
   @if (courseInfo.img) {
     <img
-      [src]="courseInfo.img.src"
+      [ngSrc]="courseInfo.img.src"
+      width="24"
+      height="24"
       class="w-6 h-auto mr-2"
-      alt="courseInfo.img.alt" />
+      alt="courseInfo.img.alt"
+      priority />
   }
   {{ courseInfo.title }}&nbsp;<span class="text-xs"
     >({{ courseInfo.year }})</span
