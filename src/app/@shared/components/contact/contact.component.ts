@@ -17,5 +17,5 @@ export class ContactComponent {
 
   public urlLikedin = 'https://es.linkedin.com/in/raquelcabanyes';
   public urlFileCV =
-    'https://drive.google.com/file/d/1SOoCrJliI0O-mcO2nRFu6kdfMrEpjpL8/view?usp=sharing';
+    'https://drive.google.com/file/d/1-dMj1sJqddRq6qLzPUBbAJIslRClSHEc/view?usp=sharing';
 }
